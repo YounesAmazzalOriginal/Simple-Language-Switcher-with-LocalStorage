@@ -90,4 +90,3 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLanguage = localStorage.getItem("language") || "english";
   updateLanguage(savedLanguage);
 });
-
