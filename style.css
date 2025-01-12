@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-dark: #333;
+  --background-light: #f9fafb;
+  --nav-bg: #1f2937;
+  --nav-text: #f1f5f9;
+  --button-bg: #64748b;
+  --button-hover-bg: #475569;
+  --button-text: #f1f5f9;
+  --content-bg: #ffffff;
+  --content-border: #e2e8f0;
+}
+
+::selection {
+  background-color: var(--nav-bg);
+  color: var(--background-light);
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+  font-size: 1.8rem;
+}
+
+nav div {
+  display: flex;
+  gap: 1rem;
+}
+
+nav button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--button-text);
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav button:hover {
+  background-color: var(--button-hover-bg);
+  transform: scale(1.05);
+}
+
+.content {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--content-bg);
+  border: 1px solid var(--content-border);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--nav-bg);
+}
+
+.content p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav h1 {
+    font-size: 1.5rem;
+  }
+
+  nav div {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav div {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav button {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .content h1 {
+    font-size: 1.6rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+}
