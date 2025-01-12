@@ -87,6 +87,7 @@ function updateLanguage(language) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  var savedLanguage = localStorage.getItem("language") || "english";
-  updateLanguage(localStorage.getItem("language"));
+  const savedLanguage = localStorage.getItem("language") || "english";
+  updateLanguage(savedLanguage);
 });
+
